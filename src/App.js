@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
 import logo from './Photo.png'
-import logo1 from './Photo.jpg'
+
 const App = () => {
   const [activeTab, setActiveTab] = useState('hello');
   const [expanded, setExpanded] = useState({
