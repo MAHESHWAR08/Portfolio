@@ -226,13 +226,13 @@ const App = () => {
                   <h3 style={{ color: '#4d5bce', marginBottom: '10px' }}>Project Name 1</h3>
                   <p style={{ marginBottom: '5px' }}><strong style={{ color: '#e5e9f0' }}>Tech Stack:</strong> [Tech Stack Used]</p>
                   <p style={{ marginBottom: '5px' }}>Brief description of what this project does.</p>
-                  <a href="#" target="_blank" rel="noreferrer" style={{ color: '#fea55f', textDecoration: 'none', fontSize: '14px' }}>🔗 View Project</a>
+                  <p target="_blank" rel="noreferrer" style={{ color: '#fea55f', textDecoration: 'none', fontSize: '14px' }}>🔗 View Project</p>
                 </div>
                 <div className="education-box">
                   <h3 style={{ color: '#43d9ad', marginBottom: '10px' }}>Project Name 2</h3>
                   <p style={{ marginBottom: '5px' }}><strong style={{ color: '#e5e9f0' }}>Tech Stack:</strong> [Tech Stack Used]</p>
                   <p style={{ marginBottom: '5px' }}>Brief description of what this project does.</p>
-                  <a href="#" target="_blank" rel="noreferrer" style={{ color: '#fea55f', textDecoration: 'none', fontSize: '14px' }}>🔗 View Project</a>
+                  <a href="https://github.com/MAHESHWAR08/WeatherApp" target="_blank" rel="noreferrer" style={{ color: '#fea55f', textDecoration: 'none', fontSize: '14px' }}>🔗 View Project</a>
                 </div>
               </div>
             </div>
