@@ -29,7 +29,7 @@ const App = () => {
     <div className="portfolio-container">
       {/* --- Top Navbar --- */}
       <nav className="navbar">
-        <div className="nav-logo">_maheshwar</div>
+        <div className="nav-logo" onClick={() => setActiveTab('hello')} style={{ cursor: 'pointer' }}>_maheshwar</div>
         <div className="nav-links">
           <button onClick={() => setActiveTab('hello')} className={activeTab === 'hello' ? 'active' : ''}>
             _hello
@@ -67,6 +67,9 @@ const App = () => {
               <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
                 <li className={`file-item ${activeTab === 'career-goal' ? 'active' : ''}`} onClick={() => setActiveTab('career-goal')}>
                   <span style={{ marginRight: '10px', fontSize: '12px' }}>{expanded['career-goal'] ? '▼' : '▶'}</span> career-goal
+                </li>
+                <li className={`file-item ${activeTab === 'internship' ? 'active' : ''}`} onClick={() => setActiveTab('internship')}>
+                  <span style={{ marginRight: '10px', fontSize: '12px' }}>{expanded['internship'] ? '▼' : '▶'}</span> internship
                 </li>
                 <li>
                   <div 
@@ -169,7 +172,7 @@ const App = () => {
               <div className="hero-text">
                 <p className="hero-sub">Hi all. I am</p>
                 <h1 className="hero-title">Maheshwar kumar singh</h1>
-                <h2 className="hero-role">{'>'} SOftware Engineer</h2>
+                <h2 className="hero-role">{'>'} Software Engineer</h2>
                 <div className="hero-code">
                                  </div>
               </div>
@@ -193,6 +196,45 @@ const App = () => {
                   <span className="line-number"></span> **/
                 </code>
               </pre>
+              <div style={{ marginTop: '20px' }}>
+                <a 
+                  href="https://maheshwarsingh.tiiny.site" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  style={{
+                    display: 'inline-block',
+                    backgroundColor: '#a4fc47',
+                    color: '#000205',
+                    padding: '10px 20px',
+                    textDecoration: 'none',
+                    borderRadius: '5px',
+                    fontSize: '14px',
+                    fontWeight: 'bold'
+                  }}
+                >
+                  Download Resume
+                </a>
+              </div>
+            </div>
+          )}
+
+          {activeTab === 'projects' && (
+            <div className="education-section">
+              <h2 style={{ color: '#e5e9f0', marginBottom: '20px' }}>_projects</h2>
+              <div className="education-list">
+                <div className="education-box">
+                  <h3 style={{ color: '#4d5bce', marginBottom: '10px' }}>Project Name 1</h3>
+                  <p style={{ marginBottom: '5px' }}><strong style={{ color: '#e5e9f0' }}>Tech Stack:</strong> [Tech Stack Used]</p>
+                  <p style={{ marginBottom: '5px' }}>Brief description of what this project does.</p>
+                  <a href="#" target="_blank" rel="noreferrer" style={{ color: '#fea55f', textDecoration: 'none', fontSize: '14px' }}>🔗 View Project</a>
+                </div>
+                <div className="education-box">
+                  <h3 style={{ color: '#43d9ad', marginBottom: '10px' }}>Project Name 2</h3>
+                  <p style={{ marginBottom: '5px' }}><strong style={{ color: '#e5e9f0' }}>Tech Stack:</strong> [Tech Stack Used]</p>
+                  <p style={{ marginBottom: '5px' }}>Brief description of what this project does.</p>
+                  <a href="#" target="_blank" rel="noreferrer" style={{ color: '#fea55f', textDecoration: 'none', fontSize: '14px' }}>🔗 View Project</a>
+                </div>
+              </div>
             </div>
           )}
 
@@ -202,6 +244,26 @@ const App = () => {
               <p>To secure a challenging entry-level role in software development
                 where I can apply my knowledge of Java, React, and problem-solving skills
                 to build real-world applications while continuously learning and growing in a dynamic tech environment.</p>
+            </div>
+          )}
+
+          {activeTab === 'internship' && (
+            <div className="education-section">
+              <h2 style={{ color: '#e5e9f0', marginBottom: '20px' }}>_internships</h2>
+              <div className="education-list">
+                <div className="education-box">
+                  <h3 style={{ color: '#4d5bce', marginBottom: '10px' }}>Security Intern</h3>
+                  <p style={{ marginBottom: '5px' }}><strong style={{ color: '#e5e9f0' }}>Company:</strong> ABIR Networks®</p>
+                  <p style={{ marginBottom: '5px' }}><strong style={{ color: '#e5e9f0' }}>Duration:</strong> 01/2025 - 04/2025</p>
+                  <p style={{ marginBottom: '5px' }}><strong style={{ color: '#e5e9f0' }}>-</strong> Worked with operating systems including kalilinux, Windows, Windows Server for cybersecurity operations.</p>
+<p style={{ marginBottom: '5px' }}><strong style={{ color: '#e5e9f0' }}>-</strong> Executed vulnerability assessment and penetration testing utilizing tools such as Burp Suite Pro and Metasploit.</p>
+<p style={{ marginBottom: '5px' }}><strong style={{ color: '#e5e9f0' }}>-</strong> Conducted web application security assessments by intercepting web requests with Burp Suite Professional.</p>
+<p style={{ marginBottom: '5px' }}><strong style={{ color: '#e5e9f0' }}>-</strong> Gained hands-on experience in vulnerability assessment, and web application penetration testing.</p>
+<p style={{ marginBottom: '5px' }}><strong style={{ color: '#e5e9f0' }}>-</strong> Applied knowledge of OWASP Top 10 vulnerabilities in security analysis.</p>
+
+
+                </div>
+              </div>
             </div>
           )}
 
@@ -219,7 +281,7 @@ const App = () => {
                 <div className="education-box">
                   <h3 style={{ color: '#43d9ad', marginBottom: '10px' }}>Higher Secondary OR Equivalent</h3>
                   <p style={{ marginBottom: '5px' }}><strong style={{ color: '#e5e9f0' }}>Course Name:</strong> Diploma in Engineering</p>
-                  <p style={{ marginBottom: '5px' }}><strong style={{ color: '#e5e9f0' }}>School:</strong> Govt. polytechninic Barauni</p>
+                  <p style={{ marginBottom: '5px' }}><strong style={{ color: '#e5e9f0' }}>School:</strong> Govt. Polytechnic Barauni</p>
                   <p style={{ marginBottom: '5px' }}><strong style={{ color: '#e5e9f0' }}>Field:</strong> Computer Science & Engineering</p>
                   <p><strong style={{ color: '#e5e9f0' }}>Grade:</strong> 74%</p>
                 </div>
@@ -242,7 +304,7 @@ const App = () => {
                 <ul style={{ listStyle: 'none', padding: 0 }}>
                   <li style={{ marginBottom: '10px' }}>📧 Email: <a href="mailto:mk.2004.7008@gmail.com" style={{ color: '#fea55f', textDecoration: 'none' }}>mk.2004.7008@gmail.com</a></li>
                   <li style={{ marginBottom: '10px' }}>📞 Phone: <a href="tel:+919570307008" style={{ color: '#fea55f', textDecoration: 'none' }}>9570307008</a></li>
-                  <li style={{ marginBottom: '10px' }}>� WhatsApp: <a href="https://wa.me/9570307008" target="_blank" rel="noreferrer" style={{ color: '#fea55f', textDecoration: 'none' }}>Connect on WhatsApp</a></li>
+                  <li style={{ marginBottom: '10px' }}>💬 WhatsApp: <a href="https://wa.me/9570307008" target="_blank" rel="noreferrer" style={{ color: '#fea55f', textDecoration: 'none' }}>Connect on WhatsApp</a></li>
                   <li style={{ marginBottom: '10px' }}>📍 Location: <a href="https://www.google.com/maps/place/Mra mens PG,Bengaluru-560068" target="_blank" rel="noreferrer" style={{ color: '#fea55f', textDecoration: 'none' }}>Bengaluru, India</a></li>
                 </ul>
               </div>
